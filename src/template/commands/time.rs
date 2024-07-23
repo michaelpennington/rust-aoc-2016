@@ -32,8 +32,8 @@ pub fn handle(day: Option<Day>, run_all: bool, store: bool) {
             Ok(()) => {
                 println!("Stored updated benchmarks.");
             }
-            Err(_) => {
-                eprintln!("Failed to store updated benchmarks.");
+            Err(e) => {
+                eprintln!("Failed to store updated benchmarks. {}", e);
             }
         }
     }
