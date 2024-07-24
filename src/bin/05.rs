@@ -14,7 +14,6 @@ pub fn part_one(input: &str) -> Option<String> {
         hasher.update(num_str.as_bytes());
         let done = hasher.finalize();
         if done[0] == 0 && done[1] == 0 && done[2] < 16 {
-            println!("Good hash: {}{} has hash {:?}", input, num_str, done);
             out.push_str(&format!("{:x}", done[2] & 0b00001111))
         }
         i += 1;
@@ -35,7 +34,6 @@ pub fn part_two(input: &str) -> Option<String> {
         hasher.update(num_str.as_bytes());
         let done = hasher.finalize();
         if done[0] == 0 && done[1] == 0 && done[2] < 16 {
-            println!("Good hash: {}{} has hash {:?}", input, num_str, done);
             let i = done[2] & 0b00001111;
             if i < 8 {
                 let pos = &mut out[i as usize];
@@ -60,7 +58,6 @@ pub fn part_two(input: &str) -> Option<String> {
                         _ => {}
                     }
                     ctr += 1;
-                    println!("{:?}", out);
                 }
             }
         }
