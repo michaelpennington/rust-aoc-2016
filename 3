@@ -1,0 +1,35 @@
+advent_of_code::solution!(14);
+
+fn contains_three_in_a_row(s: &str) -> Option<char> {
+    for ss in s.as_bytes().windows(3) {
+        if ss[0] == ss[1] && ss[1] == ss[2] {
+            return Some(ss[0] as char);
+        }
+    }
+    None
+}
+
+pub fn part_one(input: &str) -> Option<u32> {
+    None
+}
+
+pub fn part_two(input: &str) -> Option<u32> {
+    None
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_part_one() {
+        let result = part_one(&advent_of_code::template::read_file("examples", DAY));
+        assert_eq!(result, Some(22728));
+    }
+
+    #[test]
+    fn test_part_two() {
+        let result = part_two(&advent_of_code::template::read_file("examples", DAY));
+        assert_eq!(result, None);
+    }
+}
