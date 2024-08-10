@@ -26,6 +26,7 @@ bitflags = "2.6.0"
 # Template dependencies
 chrono = { version = "0.4.31", optional = true }
 dhat = { version = "0.3.2", optional = true }
+itertools = "0.13.0"
 md-5 = "0.10.6"
 pico-args = "0.5.0"
 tinyjson = "2.5.1"
